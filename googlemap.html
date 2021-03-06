@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Google Map</title>
+<meta charset="utf-8">
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJW4jsPlNKgv6jFm3B5Edp5ywgdqLWdmc&sensor=false">
+</script>
+<style type="text/css">
+	body{
+		background-color: rgba(10,100,100,0.88);
+		background-image: url(bg5.jpg);
+
+	}
+	p{
+		background-color: rgba(100,10,10,0.77);
+		text-align: center;
+	}
+	button{
+		text-align: center;
+		font-style: italic;
+		font-size: 2em;
+		margin-left: 600px;
+		font-family: 汉仪行楷简;
+	}
+	#googleMap{
+		margin-left:240px;
+		border: groove 10px green;
+	}
+	audio{
+		background-image:url(bg3.jpg);
+		background-color:black;
+		margin-right: 0;
+	}
+</style>
+<script>
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:2,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+	
+	<button>Google Map</button>
+	
+<div id="googleMap" style="width:1000px;height:800px; background-color: green;"></div>
+<hr color="blue" size="5px">
+<p>旗帜引领道路，地图直达家乡</p>
+<div id="audio">
+<audio src="lucky.mp3" autoplay="autoplay" controls  ></audio>
+</div>
+<p>能找到你的归属，就是我的小幸运啊</p>
+</body>
+</html>
